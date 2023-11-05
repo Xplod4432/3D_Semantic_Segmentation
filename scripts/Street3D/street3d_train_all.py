@@ -104,7 +104,7 @@ class shrec_dataset:
         self.voxel_size = voxel_size
         self.split = split
 
-        spath = /kaggle/input/street3d-h5/h5/train_part_80k'
+        spath = '/kaggle/input/street3d-h5/h5/train_part_80k'
         for file in os.listdir(spath):
             path = os.path.join(spath,file)
             self.data.append(path)
@@ -174,7 +174,7 @@ class shrec_dataset:
         return self.stats
 
 
-source = /kaggle/input/street3d-h5/h5/train_part_80k'
+source = '/kaggle/input/street3d-h5/h5/train_part_80k'
 
 files = os.listdir(source)
 random.shuffle(files)
