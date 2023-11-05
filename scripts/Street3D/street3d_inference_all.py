@@ -46,28 +46,30 @@ from core.models import MinkUNet as SPVCNN
 
 ## Use the 'fast' implementations only for inference, after the network is trained
 
-## Load the proper weights for each model
-#modelpath = '../../pretrained_weights/Street3D/spvcnn/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_se_p/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_se_v/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_cbam_p/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_cbam_v/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_knnse_p/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_knnse_v/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_knncbam_p/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_knncbam_v/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_pt_p/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_pt_v/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_lfa_p/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/spvcnn_lfa_v/shrec.pth'
+directory = os.getcwd()
 
-modelpath = '../../pretrained_weights/Street3D/minko/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/minko_se/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/minko_cbam/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/minko_knnse/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/minko_knncbam/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/minko_pt/shrec.pth'
-#modelpath = '../../pretrained_weights/Street3D/minko_lfa/shrec.pth'
+## Load the proper weights for each model
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_se_p/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_se_v/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_cbam_p/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_cbam_v/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_knnse_p/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_knnse_v/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_knncbam_p/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_knncbam_v/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_pt_p/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_pt_v/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_lfa_p/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/spvcnn_lfa_v/shrec.pth'
+
+modelpath = directory + '/pretrained_weights/Street3D/minko/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/minko_se/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/minko_cbam/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/minko_knnse/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/minko_knncbam/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/minko_pt/shrec.pth'
+#modelpath = directory + '/pretrained_weights/Street3D/minko_lfa/shrec.pth'
 
 ##----------------------------------------------------------------------------------
 ##-----------------------------------------------------------------------------
@@ -121,7 +123,7 @@ class shrec_dataset:
 
 
 
-sourcetest = '../../data/Street3D/h5/test_part_80k'
+sourcetest = directory + '/data/Street3D/h5/test_part_80k'
 
 
 # Initial voxel size (0.05m X 0.05m X 0.05m)

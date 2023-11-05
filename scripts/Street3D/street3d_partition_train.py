@@ -14,7 +14,7 @@ np.random.seed(2341)
 torch.manual_seed(2341)
 torch.cuda.manual_seed_all(2341)
 
-
+directory = os.getcwd()
 
 
 class shrec_dataset:
@@ -22,7 +22,7 @@ class shrec_dataset:
     def __init__(self,voxel_size,split=None) :
         self.data = []
 
-        spath = '../../data/Street3D/h5/train'
+        spath = directory + '/data/Street3D/h5/train'
 
         for file in os.listdir(spath):
           path = os.path.join(spath,file)
@@ -64,7 +64,7 @@ dataflow = torch.utils.data.DataLoader(
     num_workers=1
 )
 
-spath = '../../data/Street3D/h5/train_part_80k'
+spath = directory + '/data/Street3D/h5/train_part_80k'
 os.makedirs(spath)
 
 for idx, data in enumerate(tqdm(dataflow)):

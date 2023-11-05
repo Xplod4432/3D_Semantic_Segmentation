@@ -46,6 +46,8 @@ from core.models import MinkUNet as SPVCNN
 
 ## Use the 'fast' implementations only for inference, after the network is trained
 
+directory = os.getcwd()
+
 ## Save the path according to the desired location (change only the model name accordingly)
 model_name = 'minko'
 savepath = 'SemanticKITTI_results/'+model_name
@@ -235,7 +237,7 @@ class kitti(Dataset):
 
 with_save = True
 np.set_printoptions(suppress=True)
-source = '../../data/SemanticKITTI/sequences'
+source = directory + '/data/SemanticKITTI/sequences'
 
 train = ['00', '01', '02', '03', '04', '05', '06', '07', '09', '10']
 #validate = ['08']

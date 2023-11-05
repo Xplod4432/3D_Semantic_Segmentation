@@ -86,7 +86,7 @@ torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
 
-
+directory = os.getcwd()
 
 
 
@@ -104,7 +104,7 @@ class shrec_dataset:
         self.voxel_size = voxel_size
         self.split = split
 
-        spath = '../../data/Street3D/h5/train_part_80k'
+        spath = directory + '/data/Street3D/h5/train_part_80k'
         for file in os.listdir(spath):
             path = os.path.join(spath,file)
             self.data.append(path)
@@ -174,7 +174,7 @@ class shrec_dataset:
         return self.stats
 
 
-source = '../../data/Street3D/h5/train_part_80k'
+source = directory + '/data/Street3D/h5/train_part_80k'
 
 files = os.listdir(source)
 random.shuffle(files)
