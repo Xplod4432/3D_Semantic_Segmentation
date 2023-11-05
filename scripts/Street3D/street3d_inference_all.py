@@ -123,7 +123,7 @@ class shrec_dataset:
 
 
 
-sourcetest = '/kaggle/input/street3d-h5/h5/test_part_80k'
+sourcetest = /kaggle/input/street3d-h5/h5/test_part_80k'
 
 
 # Initial voxel size (0.05m X 0.05m X 0.05m)
