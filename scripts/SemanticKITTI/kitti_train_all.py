@@ -233,11 +233,9 @@ class kitti(Dataset):
         return xyz ,labels
 
 
-directory = os.getcwd()
-
 with_save = True
 np.set_printoptions(suppress=True)
-source = directory + '/data/SemanticKITTI/sequences'
+source = '../../data/SemanticKITTI/sequences'
 
 train = ['00', '01', '02', '03', '04', '05', '06', '07', '09', '10']
 #validate = ['08']

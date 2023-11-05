@@ -42,31 +42,30 @@ from core.models import MinkUNet as SPVCNN
 
 ## Use the 'fast' implementations only for inference, after the network is trained
 
-directory = os.getcwd()
 
 ## Load the proper weights for each model
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_se_p/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_se_v/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_cbam_p/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_cbam_v/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_knnse_p/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_knnse_v/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_knncbam_p/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_knncbam_v/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_pt_p/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_pt_v/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_lfa_p/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/spvcnn_lfa_v/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_se_p/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_se_v/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_cbam_p/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_cbam_v/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_knnse_p/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_knnse_v/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_knncbam_p/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_knncbam_v/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_pt_p/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_pt_v/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_lfa_p/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/spvcnn_lfa_v/checkpoint.tar')
 
 
-checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/minko/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/minko_se/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/minko_cbam/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/minko_knnse/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/minko_knncbam/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/minko_pt/checkpoint.tar')
-#checkpoint = torch.load(directory + '/pretrained_weights/SemanticKITTI/minko_lfa/checkpoint.tar')
+checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/minko/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/minko_se/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/minko_cbam/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/minko_knnse/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/minko_knncbam/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/minko_pt/checkpoint.tar')
+#checkpoint = torch.load('../../pretrained_weights/SemanticKITTI/minko_lfa/checkpoint.tar')
 
 ##----------------------------------------------------------------------------------
 ##-----------------------------------------------------------------------------
@@ -202,7 +201,7 @@ with_save = True
 np.set_printoptions(suppress=True)
 torch.set_printoptions(sci_mode=False)
 
-source = directory + '/data/SemanticKITTI/sequences'
+source = '../../data/SemanticKITTI/sequences'
 
 
 validate = ['08']
