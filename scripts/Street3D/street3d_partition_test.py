@@ -7,7 +7,7 @@ import os
 import h5py
 from torchsparse.utils.collate import sparse_collate_fn
 
-
+# directory = os.getcwd()
 
 random.seed(2341)
 np.random.seed(2341)
@@ -22,7 +22,7 @@ class shrec_dataset:
     def __init__(self,voxel_size,split=None) :
         self.data = []
 
-        spath = '../../data/Street3D/h5/test'
+        spath = /kaggle/input/street3d-h5/h5/test'
 
         for file in os.listdir(spath):
           path = os.path.join(spath,file)
@@ -64,7 +64,7 @@ dataflow = torch.utils.data.DataLoader(
     num_workers=1
 )
 
-spath = '../../data/Street3D/h5/test_part_80k'
+spath = /kaggle/input/street3d-h5/h5/test_part_80k'
 os.makedirs(spath)
 
 for idx, data in enumerate(tqdm(dataflow)):

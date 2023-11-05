@@ -3,8 +3,10 @@ import h5py
 import pandas as pd
 import numpy as np
 
-source = "../../data/Street3D/txt"
-target = "../../data/Street3D/h5"
+directory = os.getcwd()
+
+source = "/kaggle/input/street3d-h5/txt"
+target = str(directory) + "/data/street3d-h5/h5"
 
 for set in ['train','test']:
     if not os.path.exists(os.path.join(target,set)):
