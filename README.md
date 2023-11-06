@@ -16,13 +16,3 @@ This is an implementation of 3D Semantic Segmentation project done towards compl
 2. https://github.com/grgzam/Attention_Mechanisms_for_3D_Semantic_Segmentation
 3. https://github.com/POSTECH-CVLab/point-transformer
 4. https://github.com/mit-han-lab/torchsparse
-
-```
-@article{vanian2022improving,
-  title={Improving performance of deep learning models for 3D point cloud semantic segmentation via attention mechanisms},
-  author={Vanian, Vazgen and Zamanakos, Georgios and Pratikakis, Ioannis},
-  journal={Computers \& Graphics},
-  year={2022},
-  publisher={Elsevier}
-}
-```
