@@ -16,8 +16,8 @@ from ignite.metrics.confusion_matrix import ConfusionMatrix
 
 
 ## Uncomment to load the proper baseline model
-#from core.models import SPVCNN
-from core.models import MinkUNet as SPVCNN
+from core.models import SPVCNN
+#from core.models import MinkUNet as SPVCNN
 
 ## or the proper attention enhanced baseline model (only one model should be used at a time)
 #from models_street3d.spvcnn_se_point_global import SPVCNN
@@ -63,7 +63,7 @@ directory = os.getcwd()
 #modelpath = directory + '/pretrained_weights/Street3D/spvcnn_lfa_p/shrec.pth'
 #modelpath = directory + '/pretrained_weights/Street3D/spvcnn_lfa_v/shrec.pth'
 
-modelpath = directory + '/pretrained_weights/Street3D/minko/shrec.pth'
+modelpath = directory + '/Street3D_results/spvcnn/shrec.pth'
 #modelpath = directory + '/pretrained_weights/Street3D/minko_se/shrec.pth'
 #modelpath = directory + '/pretrained_weights/Street3D/minko_cbam/shrec.pth'
 #modelpath = directory + '/pretrained_weights/Street3D/minko_knnse/shrec.pth'
